@@ -18,19 +18,25 @@ img {
   box-sizing: content-box;
 }
 
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3e54a3;
+}
+
 /* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: bolder;
   width: 100vw;
   background-color: #fff;
   padding: 25px;
   border-bottom: 1px solid #DDD;
-}
-
-header img {
-  height: 50px;
 }
 
 .logo {
@@ -59,6 +65,7 @@ nav,
   align-items: center;
   gap: 16px;
 }
+
 @media (max-width:700px) {
   ul {
     position: absolute;
@@ -69,17 +76,17 @@ nav,
     top: -300px;
     left: 0px;
     background-color: white;
-    padding-block: 20px;
-  }
-  .menu:hover ~ ul{
+    padding: 20px;
     transition: 1s;
+  }
+
+  .menu:hover~ul {
     top: 83px;
   }
 }
 
 ul * {
   list-style: none;
-  font: bolder;
   font-size: 0.8rem;
 }
 
@@ -89,20 +96,91 @@ ul i {
 }
 
 @media screen and (max-width:700px) {
-  ul i {
+  ul i{
+    font-size: 1.5rem;
+    width: 35px;
+  }
+
+  ul * {
     font-size: 1.3rem;
-    width: fit-content;
   }
-  ul *{
-    line-height: 2rem;
-    font-size:1.5rem;
-  }
+}
+
+.icons {
+  padding-inline: 5px;
+  font-size: 1.2rem;
 }
 
 .profile {
   display: flex;
   align-items: center;
   gap: 10px;
+  transition: 1s;
+}
+
+@media screen and (max-width:700px) {
+  .profile {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    left: 0px;
+    top: -100px;
+  }
+
+  .menu:hover~.profile {
+    top: 333px;
+  }
+
+  .menu:hover~.profile .controls {
+    position: absolute;
+    display: block;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px;
+    flex-direction: column;
+    background-color: white;
+    top: 50;
+    padding-left: 70px;
+    transition: 1s;
+  }
+  .controls *{
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+  }
+}
+
+.controls {
+  display: none;
+}
+
+.controls i {
+  font-size: 1rem;
+  width: fit-content;
+}
+
+.profile:hover .controls {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px;
+  flex-direction: column;
+  background-color: white;
+  top: 91px;
+  right: 30px;
+}
+
+.sign-out * {
+  color: red;
+}
+
+@media screen and (max-width:700) {
+  .controls {
+    display: flex;
+  }
 }
 
 .profile img {
@@ -112,31 +190,26 @@ ul i {
   overflow: hidden;
 }
 
-.icons {
-  padding-inline: 5px;
-  font-size: 1.2rem;
-}
-
 i {
   width: 15px;
 }
 
-.menu{
+.menu {
   display: none;
   font-size: 2rem;
 }
+
 @media screen and (max-width:700px) {
-  .menu{
+  .menu {
     display: contents;
     transition: 1s;
   }
-  .profile{
-    display: none;
-  }
-  .menu:hover{
+
+  .menu:hover {
     color: rgb(221, 52, 52);
   }
-  .icons{
+
+  .icons {
     order: -1;
   }
 }
