@@ -1,24 +1,16 @@
 :root {
   --color1: #3e54a3;
   --color2: #ED2C49;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Poppins", "Cairo";
 }
 
 body {
-  background-color: rebeccapurple;
+  background-color: #F0F4F4;
 }
 
-* {
+*:not(img) {
   box-sizing: border-box;
   margin: 0px;
-}
-
-img {
-  box-sizing: content-box;
-}
-
-a {
   color: #222;
   text-decoration: none;
 }
@@ -26,17 +18,42 @@ a {
 a:hover {
   color: #3e54a3;
 }
-
+section{
+  width: 80vw;
+  padding: 10px;
+  margin-inline: auto;
+  margin-bottom: 50px;
+}
 /* Header */
 header {
   display: flex;
+  text-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   font-weight: bolder;
+  text-transform: uppercase;
   width: 100vw;
   background-color: #fff;
-  padding: 25px;
-  border-bottom: 1px solid #DDD;
+  padding-block: 15px;
+  padding-inline: 25px;
+  border: 1px solid #DDD;
+}
+
+.header2 {
+  font-size: 16px;
+  padding-block: 0px;
+  padding-left: 15vw;
+}
+
+header p {
+  padding: 10px;
+  border-inline: 1px solid #DDD;
+}
+
+@media screen and (max-width:700px) {
+  .header2 {
+    font-size: 12px;
+  }
 }
 
 .logo {
@@ -57,8 +74,8 @@ header {
   }
 }
 
-ul,
 nav,
+ul,
 .icons {
   display: flex;
   justify-content: center;
@@ -66,28 +83,29 @@ nav,
   gap: 16px;
 }
 
-@media (max-width:700px) {
+ul * {
+  list-style: none;
+  font-size: 0.7rem;
+}
+
+/* ul query */
+@media screen and (max-width:700px) {
   ul {
     position: absolute;
     flex-direction: column;
     align-items: flex-start;
-    z-index: -1;
+    opacity: 0;
+    z-index: 1;
     width: 100vw;
-    top: -300px;
+    top: 104px;
     left: 0px;
     background-color: white;
     padding: 20px;
-    transition: 1s;
   }
 
-  .menu:hover~ul {
-    top: 83px;
+  .menu:hover ~ ul {
+    opacity: 1;
   }
-}
-
-ul * {
-  list-style: none;
-  font-size: 0.8rem;
 }
 
 ul i {
@@ -96,7 +114,7 @@ ul i {
 }
 
 @media screen and (max-width:700px) {
-  ul i{
+  ul i {
     font-size: 1.5rem;
     width: 35px;
   }
@@ -115,38 +133,38 @@ ul i {
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: 1s;
 }
 
 @media screen and (max-width:700px) {
   .profile {
     position: absolute;
-    z-index: -1;
+    opacity: 0;
+    z-index: 1;
     width: 100%;
     background-color: #fff;
+    border: 1px solid #DDD;
     padding-left: 20px;
-    padding-bottom: 10px;
+    padding-block: 10px;
     left: 0px;
-    top: -100px;
+    top: 379px;
+  }
+  .menu:hover ~  .profile {
+    opacity: 1;
   }
 
-  .menu:hover~.profile {
-    top: 333px;
-  }
-
-  .menu:hover~.profile .controls {
+  .menu:hover ~  .profile .controls {
     position: absolute;
     display: block;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 16px;
-    flex-direction: column;
+    z-index: 1;
+    opacity: 1;
+    padding-block: 16px;
     background-color: white;
-    top: 50;
+    top: 61px;
     padding-left: 70px;
-    transition: 1s;
+    border-top: 0px;
   }
-  .controls *{
+
+  .controls * {
     padding-bottom: 10px;
     font-size: 1.5rem;
   }
@@ -154,8 +172,8 @@ ul i {
 
 .controls {
   display: none;
+  border: 1px solid #DDD;
 }
-
 .controls i {
   font-size: 1rem;
   width: fit-content;
@@ -164,13 +182,15 @@ ul i {
 .profile:hover .controls {
   position: absolute;
   display: flex;
+  flex-direction: column;
+  text-align: left;
   justify-content: flex-start;
   align-items: center;
-  padding: 16px;
-  flex-direction: column;
+  width: 170px;
+  padding: 16px 0px;
   background-color: white;
-  top: 91px;
-  right: 30px;
+  top: 72px;
+  right: 0px;
 }
 
 .sign-out * {
@@ -211,5 +231,167 @@ i {
 
   .icons {
     order: -1;
+  }
+}
+
+/* Section one */
+
+.img-container {
+  position: absolute;
+  overflow: hidden;
+  left: 0%;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+}
+
+.paths {
+  background-color: #fff;
+}
+
+.paths .container {
+  display: flex;
+  align-items: center;
+  width: 80vw;
+  margin-inline: auto;
+  margin-bottom: 50px;
+}
+
+.paths .container>* {
+  flex: 1;
+}
+
+.paths .container img {
+  width: 40vw;
+}
+
+.paths span {
+  display: block;
+  font-size: clamp(0px, 1rem + 3vw, 5rem);
+  font-weight: 500;
+  margin-block: 20px;
+  color: #3e54a3;
+}
+
+.paths p {
+  color: #222;
+  font-size: clamp(0px, 0.5rem + 1.4vw, 5rem);
+}
+
+@media screen and (max-width:800px) {
+  .paths .container {
+    width: 80vw;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .paths .container img {
+    width: 70vw;
+  }
+}
+
+/* cards */
+.cards{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.card{
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  flex-direction: row-reverse;
+  width: 80vw;
+  max-width: 1100px;
+  gap: 30px;
+  margin: auto;
+}
+@media screen and (max-width:800px) {
+  .card{
+    flex-direction: column;
+  }
+}
+.level{
+  display: flex;
+  justify-content: space-between;
+  width: 110px;
+  font-weight: bold;
+  border:2px solid ;
+  border-radius: 8px ;
+  margin-bottom:20px ;
+}
+
+.level span{
+  /* display: flex;
+  align-items: center;*/
+  text-align: center; 
+  color: white;
+  width: 25px;
+  border-top-left-radius:6px ;
+  border-top-left-radius:6px ;
+}
+.level p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.level.one{
+  border-color: #6ABECD;
+}
+.level.one span{
+  background-color:#6ABECD;
+}
+
+.level.two{
+  border-color: #AAD742;
+}
+.level.two span{
+  background-color:#AAD742;
+}
+.level.three{
+  border-color: #F1B604;
+}
+.level.three span{
+  background-color:#F1B604;
+}
+.level.four{
+  border-color: #F48925;
+}
+.level.four span{
+  background-color:#F48925;
+}
+.description a{
+  display: block;
+  font-size:1.1rem ;
+  margin-bottom: 20px;
+}
+.description p{
+  text-transform: uppercase;
+  font-size:0.7rem;
+}
+@media screen and (max-width:800px) {
+  .level{
+    width: fit-content;
+    font-size: 12px;
+  }
+  .description p{
+    font-size: 9px;
+    font-size: bold;
+    padding: 5px;
+  }
+}
+.card img{
+  max-width: 35vw;
+  border-radius: 15px;
+}
+@media screen and (max-width:800px) {
+  .card img{
+    max-width: 85%;
+    max-height: 50%;
   }
 }
