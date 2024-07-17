@@ -416,9 +416,10 @@ footer,
 
 @media screen and (max-width:800px) {
   .card img {
-    max-width: 85%;
-    max-height: 50%;
+    width: 100%;
+    max-width: 100%;
   }
+  
 }
 
 .card:last-child {
