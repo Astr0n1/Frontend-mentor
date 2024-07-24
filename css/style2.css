@@ -1,0 +1,49 @@
+.landing .container {
+  align-items: flex-start;
+  width: 90vw;
+  margin-left: 7vw;
+}
+@media (max-width:800px) {
+  .landing .container {
+    margin-left: auto;
+    align-items:center;
+    width: 85vw;
+  }
+}
+.landing .container > img {
+  width:50vw;
+}
+@media (max-width:800px) {
+  .landing .container > img {
+    width:70vw;
+    margin-left: 15vw;
+  }
+}
+.landing span {
+  display: block;
+  font-size: clamp(0px, 0.8rem + 2.4vw, 4rem);
+  font-weight: 500;
+  margin-block: 20px;
+  color: #3e54a3;
+}
+.landing p {
+  color: #222;
+  font-size: clamp(0px, 0.4rem + 1vw, 3rem);
+}
+.landing .small {
+  display: inline;
+  font-size: clamp(0px, 0.4rem + 1vw, 3rem);
+  font-weight: 500;
+  margin-block: 20px;
+  color: #3e54a3;
+}
+.community{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.community img{
+  width: 25vw;
+  min-width: 120px;
+}

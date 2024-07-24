@@ -36,19 +36,35 @@ header {
   align-items: center;
   font-weight: bolder;
   text-transform: uppercase;
-  width: 100vw;
+  width: 100vw; 
+  max-width: 1400px;
+  margin-inline: auto;
   background-color: #fff;
+  border-bottom: 1px solid #DDD;
   padding-block: 15px;
-  padding-inline: 25px;
-  border: 1px solid #DDD;
+  padding-inline: 30px;
 }
-
+header::before, .header2::before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 70px;
+  border-bottom: 1px solid #DDD;
+  background-color: #fff;
+}
 .header2 {
   font-size: 16px;
   padding-block: 0px;
   padding-left: 15vw;
 }
 
+.header2::before{
+  top: 71px;
+  height: 45px;
+}
 header p {
   padding: 10px;
   border-inline: 1px solid #DDD;
@@ -57,6 +73,9 @@ header p {
 @media screen and (max-width:700px) {
   .header2 {
     font-size: 12px;
+  }
+  .header2::before{
+    display: none;
   }
 }
 
@@ -107,7 +126,7 @@ ul * {
     padding: 20px;
   }
 
-  .menu:hover~ul {
+  .menu:active~ul {
     opacity: 1;
   }
 }
@@ -240,60 +259,62 @@ i {
   }
 }
 
-/* Section one */
+/* landing */
 
 .img-container {
   position: absolute;
+  z-index: -1;
   overflow: hidden;
   left: 0%;
-  opacity: 0.3;
+  opacity: 0.15;
   width: 100%;
   height: 100%;
 }
 
-.paths,
+
 footer,
 .CR {
   background-color: #fff;
 }
 
-.paths .container {
+.landing .container {
   display: flex;
+  gap: 30px;
   align-items: center;
   width: 80vw;
   margin-inline: auto;
-  margin-bottom: 50px;
+  margin-block: 50px;
 }
 
-.paths .container>* {
+.landing .container>* {
   flex: 1;
 }
 
-.paths .container img {
+.landing .container > img {
   width: 40vw;
 }
 
-.paths span {
+.landing span {
   display: block;
-  font-size: clamp(0px, 1rem + 3vw, 5rem);
+  font-size: clamp(0px, 1rem + 2.4vw, 4rem);
   font-weight: 500;
   margin-block: 20px;
   color: #3e54a3;
 }
 
-.paths p {
+.landing p {
   color: #222;
   font-size: clamp(0px, 0.5rem + 1.4vw, 5rem);
 }
 
 @media screen and (max-width:800px) {
-  .paths .container {
+  .landing .container {
     width: 80vw;
     text-align: center;
     flex-direction: column;
   }
 
-  .paths .container img {
+  .landing .container > img {
     width: 70vw;
   }
 }
