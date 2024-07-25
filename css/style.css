@@ -1,11 +1,11 @@
 :root {
   --color1: #3e54a3;
-  --color2: #ED2C49;
+  --color2: #ed2c49;
   font-family: "Poppins", "Cairo";
 }
 
 body {
-  background-color: #F0F4F4;
+  background-color: #f0f4f4;
 }
 
 *:not(img) {
@@ -14,22 +14,22 @@ body {
   color: #222;
   text-decoration: none;
 }
-a{
-  color:#666 ;
+a {
+  color: #666;
 }
 a:hover {
-  color:var(--color1);
+  color: var(--color1);
 }
-.blue{
-  color:var(--color1);
+.blue {
+  color: var(--color1);
 }
-.red{
+.red {
   color: var(--color2);
 }
-.bold{
+.bold {
   font-weight: 700;
 }
-.large{
+.large {
   font-size: 1.5rem;
 }
 section {
@@ -47,23 +47,24 @@ header {
   align-items: center;
   font-weight: bolder;
   text-transform: uppercase;
-  width: 100vw; 
+  width: 100%;
   max-width: 1400px;
   margin-inline: auto;
   background-color: #fff;
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #ddd;
   padding-block: 15px;
   padding-inline: 30px;
 }
-header::before, .header2::before{
+header::before,
+.header2::before {
   content: "";
   position: absolute;
   z-index: -1;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 70px;
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #ddd;
   background-color: #fff;
 }
 .header2 {
@@ -72,20 +73,21 @@ header::before, .header2::before{
   padding-left: 15vw;
 }
 
-.header2::before{
+.header2::before {
   top: 71px;
   height: 45px;
 }
 header p {
   padding: 10px;
-  border-inline: 1px solid #DDD;
+  border-inline: 1px solid #ddd;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width: 700px) {
   .header2 {
     font-size: 12px;
   }
-  .header2::before{
+  header::before,
+  .header2::before {
     display: none;
   }
 }
@@ -98,7 +100,7 @@ header p {
   display: none;
 }
 
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
   .logo-mobile {
     display: block;
   }
@@ -123,21 +125,21 @@ ul * {
 }
 
 /* ul query */
-@media screen and (max-width:700px) {
+@media screen and (max-width: 700px) {
   ul {
     position: absolute;
     flex-direction: column;
     align-items: flex-start;
     opacity: 0;
     z-index: 1;
-    width: 100vw;
+    width: 100%;
     top: 104px;
     left: 0px;
     background-color: white;
     padding: 20px;
   }
 
-  .menu:active~ul {
+  .menu:active ~ ul {
     opacity: 1;
   }
 }
@@ -147,7 +149,7 @@ ul i {
   width: 0px;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width: 700px) {
   ul i {
     font-size: 1.5rem;
     width: 35px;
@@ -169,25 +171,25 @@ ul i {
   gap: 10px;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width: 700px) {
   .profile {
     position: absolute;
     opacity: 0;
     z-index: 1;
     width: 100%;
     background-color: #fff;
-    border: 1px solid #DDD;
+    border: 1px solid #ddd;
     padding-left: 20px;
     padding-block: 10px;
     left: 0px;
     top: 379px;
   }
 
-  .menu:hover~.profile {
+  .menu:hover ~ .profile {
     opacity: 1;
   }
 
-  .menu:hover~.profile .controls {
+  .menu:hover ~ .profile .controls {
     position: absolute;
     display: block;
     z-index: 1;
@@ -207,7 +209,7 @@ ul i {
 
 .controls {
   display: none;
-  border: 1px solid #DDD;
+  border: 1px solid #ddd;
 }
 
 .controls i {
@@ -233,7 +235,7 @@ ul i {
   color: red;
 }
 
-@media screen and (max-width:700) {
+@media screen and (max-width: 700) {
   .controls {
     display: flex;
   }
@@ -255,7 +257,7 @@ i {
   font-size: 2rem;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width: 700px) {
   .menu {
     display: contents;
     transition: 1s;
@@ -282,7 +284,6 @@ i {
   height: 100%;
 }
 
-
 footer,
 .CR {
   background-color: #fff;
@@ -297,7 +298,7 @@ footer,
   margin-block: 50px;
 }
 
-.landing .container>* {
+.landing .container > * {
   flex: 1;
 }
 
@@ -310,7 +311,7 @@ footer,
   font-size: clamp(0px, 1rem + 2.4vw, 4rem);
   font-weight: 500;
   margin-block: 20px;
-  color:var(--color1);
+  color: var(--color1);
 }
 
 .landing p {
@@ -318,7 +319,7 @@ footer,
   font-size: clamp(0px, 0.5rem + 1.4vw, 5rem);
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
   .landing .container {
     width: 80vw;
     text-align: center;
@@ -347,13 +348,13 @@ footer,
   padding: 20px;
   border-radius: 20px;
   background-color: #fff;
-  border: 1px solid #DBE5E6;
+  border: 1px solid #dbe5e6;
   flex-direction: row-reverse;
   max-width: 1100px;
   gap: 30px;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
   .card {
     flex-direction: column;
   }
@@ -385,35 +386,35 @@ footer,
 }
 
 .level.one {
-  border-color: #6ABECD;
+  border-color: #6abecd;
 }
 
 .level.one span {
-  background-color: #6ABECD;
+  background-color: #6abecd;
 }
 
 .level.two {
-  border-color: #AAD742;
+  border-color: #aad742;
 }
 
 .level.two span {
-  background-color: #AAD742;
+  background-color: #aad742;
 }
 
 .level.three {
-  border-color: #F1B604;
+  border-color: #f1b604;
 }
 
 .level.three span {
-  background-color: #F1B604;
+  background-color: #f1b604;
 }
 
 .level.four {
-  border-color: #F48925;
+  border-color: #f48925;
 }
 
 .level.four span {
-  background-color: #F48925;
+  background-color: #f48925;
 }
 
 .description a {
@@ -428,7 +429,7 @@ footer,
   padding: 5px;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
   .level {
     width: fit-content;
     font-size: 12px;
@@ -446,12 +447,11 @@ footer,
   border-radius: 15px;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
   .card img {
     width: 100%;
     max-width: 100%;
   }
-  
 }
 
 .card:last-child {
@@ -477,16 +477,17 @@ footer {
 .sites a {
   display: flex;
   justify-content: space-between;
-  gap: 30px
+  gap: 30px;
 }
 
 .sites {
   max-width: 150px;
 }
 
-
-@media screen and (max-width:500px) {
-  .contacts,.sub,.bottom {
+@media screen and (max-width: 500px) {
+  .contacts,
+  .sub,
+  .bottom {
     text-align: center;
     flex-direction: column;
     align-items: center;
@@ -500,33 +501,33 @@ footer {
 
 .sites i {
   font-size: 1.5rem;
-  color: #6ABECD;
+  color: #6abecd;
 }
 /* sub */
 .sub {
   flex-direction: column;
 }
-.top{
+.top {
   width: 350px;
 }
-.top span{
+.top span {
   display: block;
   font-size: 1.5rem;
   font-weight: 500;
-  color:var(--color1);
+  color: var(--color1);
   margin-bottom: 10px;
 }
-.bottom{
+.bottom {
   display: flex;
   align-items: center;
-  gap:30px
+  gap: 30px;
 }
-input{
+input {
   padding: 10px;
-  font-size:1.1rem ;
+  font-size: 1.1rem;
   width: 300px;
 }
-.bottom a{
+.bottom a {
   text-align: center;
   color: white;
   background-color: var(--color2);
@@ -534,80 +535,81 @@ input{
   padding-block: 10px;
   border-radius: 20px;
 }
-@media screen and (max-width:500px) {
-  .sub{
+@media screen and (max-width: 500px) {
+  .sub {
     width: 90vw;
     max-width: 300px;
   }
-  .bottom{
+  .bottom {
     width: 90vw;
     max-width: 300px;
   }
-  .bottom input, .bottom a{
+  .bottom input,
+  .bottom a {
     width: 100%;
   }
 }
 /* footer-nav */
-.footer-nav{
+.footer-nav {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.footer-nav div{
+.footer-nav div {
   display: flex;
   flex-direction: column;
   max-width: 400px;
 }
-.footer-nav h3{
+.footer-nav h3 {
   text-wrap: nowrap;
 }
-.footer-nav a{
+.footer-nav a {
   font-size: 0.9rem;
 }
-@media screen and (max-width:700px) {
-  .footer-nav div{
+@media screen and (max-width: 700px) {
+  .footer-nav div {
     width: 35vw;
   }
-  
-  .footer-nav h3{
+
+  .footer-nav h3 {
     font-size: 1rem;
   }
-  .footer-nav a{
+  .footer-nav a {
     font-size: 0.75rem;
   }
 }
 
 /* CR */
-.CR{
+.CR {
   display: flex;
   justify-content: space-between;
   text-wrap: nowrap;
   align-items: center;
-  border: 1px solid #DDD;
+  border: 1px solid #ddd;
   gap: 10px;
   padding-block: 10px;
   padding-inline: 5vw;
 }
-.CR p{
+.CR p {
   font-size: 1.2rem;
 }
-.policy{
+.policy {
   display: flex;
   justify-content: space-between;
-  gap:15px;
+  gap: 15px;
   font-size: 0.9rem;
 }
-@media screen and (max-width:700px){
-  .CR p{
+@media screen and (max-width: 700px) {
+  .CR p {
     font-size: 0.9rem;
   }
-  .CR a{
+  .CR a {
     font-size: 0.6rem;
   }
 }
-@media screen and (max-width:540px) {
-  .CR{
+@media screen and (max-width: 540px) {
+  .CR {
     flex-direction: column;
   }
 }
