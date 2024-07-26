@@ -345,6 +345,7 @@ footer,
   display: flex;
   position: relative;
   align-items: center;
+  margin-inline: auto;
   padding: 20px;
   border-radius: 20px;
   background-color: #fff;
