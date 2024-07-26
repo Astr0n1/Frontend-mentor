@@ -345,6 +345,7 @@ p.description {
   display: flex;
   align-items: start;
   flex-direction: column;
+  padding: 0px;
   gap: 50px;
   margin: 0px;
 }
