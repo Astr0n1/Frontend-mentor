@@ -139,7 +139,7 @@ ul * {
     padding: 20px;
   }
 
-  .menu:active ~ ul {
+  .menu:hover ~ ul {
     opacity: 1;
   }
 }
@@ -291,7 +291,6 @@ footer,
 
 .landing .container {
   display: flex;
-  gap: 30px;
   align-items: center;
   width: 80vw;
   margin-inline: auto;
@@ -508,9 +507,9 @@ footer {
 .sub {
   flex-direction: column;
 }
-.top {
+/* .top {
   width: 350px;
-}
+} */
 .top span {
   display: block;
   font-size: 1.5rem;
@@ -525,6 +524,7 @@ footer {
 }
 input {
   padding: 10px;
+  border: 1px solid #AAA;
   font-size: 1.1rem;
   width: 300px;
 }
@@ -532,7 +532,7 @@ input {
   text-align: center;
   color: white;
   background-color: var(--color2);
-  width: 140px;
+  width: 160px;
   padding-block: 10px;
   border-radius: 20px;
 }
@@ -541,13 +541,14 @@ input {
     width: 90vw;
     max-width: 300px;
   }
-  .bottom {
-    width: 90vw;
-    max-width: 300px;
+  .bottom input
+  {
+    border: 1px solid #AAA;
+    width: 90%;
   }
-  .bottom input,
   .bottom a {
-    width: 100%;
+    width: 60%;
+    margin: auto;
   }
 }
 /* footer-nav */
@@ -593,20 +594,20 @@ input {
   padding-inline: 5vw;
 }
 .CR p {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .policy {
   display: flex;
   justify-content: space-between;
   gap: 15px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 @media screen and (max-width: 700px) {
   .CR p {
-    font-size: 0.9rem;
+    font-size: 0.65rem;
   }
   .CR a {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
 }
 @media screen and (max-width: 540px) {

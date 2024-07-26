@@ -8,7 +8,7 @@ body {
 .landing .container {
   align-items: flex-start;
   width: 90vw;
-  margin-left: 7vw;
+  margin-inline: auto;
 }
 @media (max-width: 800px) {
   .landing .container {
@@ -18,12 +18,14 @@ body {
   }
 }
 .landing .container > img {
-  width: 50vw;
+  width: 45vw;
+  transform: translateX(30px);
+  
 }
 @media (max-width: 800px) {
   .landing .container > img {
     width: 70vw;
-    margin-left: 15vw;
+    margin:auto;
   }
 }
 .landing span {
@@ -35,7 +37,7 @@ body {
 }
 .landing p {
   color: #222;
-  font-size: clamp(0px, 0.4rem + 1vw, 3rem);
+  font-size:1rem;
 }
 .landing .small {
   display: inline;
@@ -44,6 +46,33 @@ body {
   margin-block: 20px;
   color: var(--primary-color);
 }
+.landing .login{
+  margin: 20px 0px;
+  border-radius: 30px;
+  background-color: #ED2C49;
+  width: fit-content;
+  padding: 15px 30px;
+}
+.landing a{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.landing a *{
+  color: white  ;
+  font-weight: 500;
+}
+.login i{
+  font-size: 1.3rem;
+}
+@media (max-width:800px) {
+  .landing .login{
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+}
+
 .community {
   display: flex;
   align-items: center;
@@ -51,8 +80,25 @@ body {
   margin-top: 20px;
 }
 .community img {
-  width: 25vw;
-  min-width: 120px;
+  width: 200px;
+}
+@media (max-width: 500px) {
+  .community img {
+    width: 40vw;
+  }
+}
+@media (max-width: 800px) {
+  .community{
+    text-align: left;
+    margin-block:20px ;
+    gap: 20px;
+  }
+}
+@media (max-width: 570px) {
+  .community{
+    flex-direction: column;
+    text-align: center;
+  }
 }
 /* Recommendations */
 .recommendation {
@@ -60,7 +106,8 @@ body {
   justify-content: space-between;
   margin-inline: auto;
   border-radius: 20px;
-  width: 95% !important;
+  gap:30px;
+  width: 95% ;
   padding-inline: 7.5vw;
   padding-block: 60px;
   background-image: linear-gradient(0deg, #f0f4f4 50%, white);
@@ -81,14 +128,25 @@ body {
   border-radius: 50%;
   margin-block: 30px;
 }
+
+@media (max-width:300px) {
+  .recommendation .title{
+    text-wrap: nowrap;
+    font-size: 0.8rem;
+  }
+}
 @media (max-width: 800px) {
   .recommendation {
     flex-direction: column;
-    gap: 70px;
-    padding: 10vw;
+    align-items: center;
+    margin-inline:0px ;
+    padding-inline: 0px;
+    gap: 30px;
+    width: 100%;
   }
   .recommendation > div {
-    width: 100%;
+    margin: 2.5%;
+    width: 95% ;
   }
 }
 /* Featured */
@@ -200,7 +258,23 @@ p.description {
   background-color: #fff;
   width: 40%;
 }
+.how-it-works .bold{
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+@media (max-width:300px) {
+  .how-it-works .bold{
+  font-size: 0.8rem;
+  }
+}
+.how-it-works .on-hover{
+  margin-top: 20px;
+}
 @media (max-width:800px) {
+  .how-it-works{
+    width: 100%;
+    padding-inline: 5%;
+  }
   .how-it-works .steps{
     margin-top: 80vw;
   }
@@ -271,6 +345,7 @@ p.description {
 @media (max-width:800px) {
   .pro .introduction, .pro .advantage > div{
     width: 80vw;
+    text-align: center;
   }
 }
 .pro span{
@@ -316,10 +391,16 @@ p.description {
   color: var(--primary-color);
   margin-bottom: 15px;
 }
+@media (max-width:800px) {
+  .pro i{
+  margin: 0px;
+  }
+}
 .pro h4{
   font-size: 1.6rem;
 }
 .pro > a{
+  text-wrap: nowrap;
   font-size: 1.3rem;
   font-weight: 500;
   padding: 15px 40px;
@@ -331,6 +412,13 @@ p.description {
 .pro > a:hover{
   background-color: #BC102A;
 }
+@media(max-width:450px){
+  .pro > a{
+    padding-inline: 30px;
+    max-width: 70vw;
+    font-size: 1rem;
+  }
+}
 /* FAQs */
 .faq{
   margin: 80px auto;
@@ -339,7 +427,6 @@ p.description {
 }
 .faq > p{
   text-align: center;
-  margin-bottom: 50px;
 }
 .faq ul{
   display: flex;
@@ -352,14 +439,15 @@ p.description {
 
 .faq li{
   position: relative;
-  width: 100%;
+  width: 90%;
+  margin: auto;
   padding: 20px;
   border: 2px solid #DDD;
   border-radius: 15px;
 }
 .faq li p:first-child{
+  display: flex;
   font-size: 1.5rem;
-  margin-bottom: 20px;
 }
 .faq li p:first-child::before{
   content: "+";
@@ -371,7 +459,9 @@ p.description {
 }
 .faq .on-hover{
   padding: 20px;
+  padding-left: 0px;
   border-top: 2px solid #DDD;
+  margin-top: 15px;
   font-size: 1.2rem;
 }
 @media (max-width:800px) {
@@ -396,15 +486,18 @@ p.description {
 }
 /* hiring */
 .hiring{
+  position: relative;
+  overflow: hidden; 
   padding: 50px 80px;
   display: flex;
   align-items: center;
   gap: 50px;
-  margin: 80px auto;
+  margin-top: 80px;
   background-color: var(--primary-color);
 }
-@media (max-width:800px) {
+@media (max-width:1000px) {
   .hiring{
+    gap:0px;
     padding-inline: 30px;
     flex-direction: column;
   }
@@ -416,7 +509,6 @@ p.description {
   position: absolute;
   opacity: 0.3;
   right: 0;
-  transform: translateY(-50px);
 }
 .hiring article {
   display: flex;
@@ -432,7 +524,16 @@ p.description {
   color:white;
   font-size: 1.2rem;
 }
+@media (max-width:400px) {
+  .hiring article h3{
+    font-size: 1.5rem;
+  }
+  .hiring article p{
+  font-size: 1rem;
+  }
+}
 .hiring article a{
+  text-wrap: nowrap;
   padding: 15px 25px;
   background-color: #fff;
   border-radius: 40px;
@@ -441,14 +542,30 @@ p.description {
   font-weight: 500;
   align-self: flex-start;
 }
+@media (max-width:500px) {
+  .hiring article a{
+    padding-inline: 30px;
+    max-width: 70vw;
+    font-size: 0.8rem;
+  }
+}
 .hiring img:last-child{
   position: relative;
   z-index: 1;
-  width: 40%;
-  transform: translateY(50px);
+  width: 500px;
+  max-width: 50%;
+  align-self: flex-end;
+  transform: translate(50px, 50px);
 }
-@media (max-width:800px) {
+@media (max-width:1000px) {
   .hiring img:last-child{
     width: 80vw;
+    max-width: unset;
+    align-self: center;
+    transform: translate(0px, 50px);
+  }
+  .hiring article a{
+    margin-top: 20px;
+  align-self: center;
   }
 }
